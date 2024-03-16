@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaints</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <script src="script.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+  <div class="container-fluid">
+
+    <div class="upper">
+
+      <div class="left">
+        
+        <p>Submit a suggestion or a complaint...!</p>
+        <h1>Have an idea or need help with an issue ?</h1>
+        <br>
+        <p>Our professional team is here to answer your questions, 
+          help you get the information <br> you need and handle complaints. 
+          <br>Send us a message and we will do our best to help.</p>
+          <p class="sub">Submit a query, suggestion or complaint</h2>
+          <br>
+        
+          <p>If you wish to log a complaint, please fill out the form below and we will endeavor
+             to resolve any issues. <br>You can also <span style="color: orange;">submit a complaint on the unified ecomplain portal</span>. <br>If you wish to make
+              a suggestion, <span style="color: orange;">please go to our eSuggest portal</span><br>,we look forward to hearing from you.</p>
+
+      </div>
+      <div class="right">
+        <h2>Contact us..</h2>
+        <br>
+        <h5>Do you have a question? Get in touch with us directly and 
+          we'll be glad to help.</h5>
+          <br><br>
+          <div class="box">
+            <div class="b1">
+              <p>Office hours</p>
+              <p>Monday - Friday 08:00 - 18:00</p>
+            </div>
+            <div class="b2">
+              <p>Call us</p>
+              <p style="color: orange;">+91 600 55 55 59</p>
+              
+            </div>
+            <div class="b3">
+              <p>Email us</p>
+              <p>Send in your queries to</p>
+              <p style="color: orange;">info@visitindia.com</p>
+            </div>
+            <div class="b4">
+              <p>Whatsapp Chat (Live 08:00 - 20:00)</p>
+            </div>
+            <i class="fa fa-whatsapp" style="font-size:48px;color:green"></i>
+          </div>
+
+      </div>
+    </div>
+    <div class="lower">
+      <!-- <div class="lside"> -->
+        <form class="row g-3" name="myform" method="post" id="myForm">
+        <div class="row g-3">
+          <div class="col">
+            <label for="Name" class="form-label">Name</label>
+            <input type="text" class="form-control"  name="Name" required>
+          </div>
+          <div class="col">
+            <label for="Establishment type" class="form-label">Establishment type</label>
+            <input type="text" class="form-control" name="establishment_type"  aria-label="Establishment type" required>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col">
+            
+            <label for="email" class="form-label">Email Address</label>
+            <input type="Email" class="form-control" name="email" aria-label="Email Address" required>
+          </div>
+          <div class="col">
+            <label for="Tell us who you are" class="form-label">Tell us who you are</label>
+            <input type="text" class="form-control" name="who" aria-label="Tell us who you are" required>
+          </div>
+        </div>
+
+
+        <div class="row g-3">
+          <div class="col">
+            
+            <!-- <label for="Country" class="form-label">Country</label>
+            <input type="" class="form-control" name="country" aria-label="Country" required> -->
+
+            <label for="Country" class="form-label">Country</label>
+            <select class="form-control" name="country" aria-label="Country" required>
+                <option value="" disabled selected>Select a country</option>
+                <option value="in">India</option>
+                <option value="sL">Sri Lanka</option>
+                <option value="np">Nepal</option>
+                <option value="cn">China</option>
+                <option value="bp">BanglaDesh</option>
+            </select>
+            
+
+
+          </div>
+          <div class="col">
+            <label for="Establishment namel" class="form-label">Establishment name</label>
+            <input type="text" class="form-control" name="establishment_name" aria-label="Establishment name" required>
+          </div>
+        </div>
+
+        <div class="row g-3">
+          <div class="col">
+            
+            <label for="Number" class="form-label">Contact Number</label>
+          <input type="tel" class="form-control" name="number" aria-label="Number" required>
+          </div>
+          <div class="col">
+            <label for="Message" class="form-label">Message</label>
+            <input type="text" class="form-control" name="message" aria-label="Message" required>
+          </div>
+        </div>
+          
+          <!-- <button type="button" class="btn btn-outline-success">Success</button> -->
+          <button type="submit" class="btn btn-outline-success">Submit</button>
+
+          
+        </form>
+    
+    </div>
+  </div>
+  
+<!-- Add this script to your HTML file -->
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const myForm = document.getElementById("myForm");
+
+    myForm.addEventListener("submit", function (event) {
+      // Prevent the default form submission
+      event.preventDefault();
+
+      // Correctly reference the form element
+      const formData = new FormData(myForm);  // Use 'myForm' instead of 'event.target'
+
+      // Make a POST request to your server
+      fetch("/post", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data.message);
+          // Handle success, e.g., show a success message to the user
+        })
+        .catch((error) => {
+          console.log("Error:", error);
+          // Handle error, e.g., show an error message to the user
+        });
+    });
+  });
+</script> -->
+
+</body>
+</html>
+
